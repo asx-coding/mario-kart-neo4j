@@ -1,4 +1,5 @@
 neo4j
+neo4j-runway
 pandas
 python-dotenv
 supabase

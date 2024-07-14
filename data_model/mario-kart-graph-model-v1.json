@@ -1,0 +1,332 @@
+{
+  "style": {
+    "font-family": "Nunito Sans",
+    "background-color": "#F2F2F2",
+    "background-image": "",
+    "background-size": "100%",
+    "node-color": "#4C8EDA",
+    "border-width": 0,
+    "border-color": "#000000",
+    "radius": 75,
+    "node-padding": 5,
+    "node-margin": 2,
+    "outside-position": "auto",
+    "node-icon-image": "",
+    "node-background-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
+    "caption-position": "inside",
+    "caption-max-width": 200,
+    "caption-color": "#ffffff",
+    "caption-font-size": 20,
+    "caption-font-weight": "normal",
+    "label-position": "inside",
+    "label-display": "bare",
+    "label-color": "#ffffff",
+    "label-background-color": "#848484",
+    "label-border-color": "#848484",
+    "label-border-width": 3,
+    "label-font-size": 20,
+    "label-padding": 5,
+    "label-margin": 4,
+    "directionality": "directed",
+    "detail-position": "above",
+    "detail-orientation": "parallel",
+    "arrow-width": 3,
+    "arrow-color": "#848484",
+    "margin-start": 5,
+    "margin-end": 5,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "relationship-icon-image": "",
+    "type-color": "#848484",
+    "type-background-color": "#F2F2F2",
+    "type-border-color": "#848484",
+    "type-border-width": 0,
+    "type-font-size": 21,
+    "type-padding": 5,
+    "property-position": "outside",
+    "property-alignment": "colon",
+    "property-color": "#848484",
+    "property-font-size": 20,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n0",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "caption": "",
+      "labels": [
+        "Race"
+      ],
+      "properties": {
+        "createDate": "create_date | neo4j.time.DateTime",
+        "id": "race_id | str | unique",
+        "engineClass": "engine_class | str",
+        "freeplay": "freeplay | bool",
+        "participants": "int | ignore",
+        "csv": "race_mod.csv"
+      },
+      "style": {
+        "outside-position": "bottom-right"
+      }
+    },
+    {
+      "id": "n1",
+      "position": {
+        "x": -708.5570020603752,
+        "y": -269.3897931043973
+      },
+      "caption": "",
+      "labels": [
+        "Player"
+      ],
+      "properties": {
+        "firstName": "first_name | str | nodekey",
+        "lastName": "last_name | str | nodekey",
+        "id": "player_id | str | unique",
+        "csv": "player_roster.csv"
+      },
+      "style": {}
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": 236.18566735345837,
+        "y": -269.3897931043973
+      },
+      "caption": "",
+      "labels": [
+        "Course"
+      ],
+      "properties": {
+        "id": "course_id | str | unique",
+        "name": "name | str",
+        "csv": "course.csv"
+      },
+      "style": {
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n4",
+      "position": {
+        "x": 594.4516720092568,
+        "y": -269.3897931043973
+      },
+      "caption": "",
+      "labels": [
+        "Cup"
+      ],
+      "properties": {
+        "name": "name | str",
+        "id": "cup_id | str | unique",
+        "csv": "cup.csv"
+      },
+      "style": {}
+    },
+    {
+      "id": "n5",
+      "position": {
+        "x": -236.18566735345902,
+        "y": -269.3897931043973
+      },
+      "caption": "",
+      "labels": [
+        "RacePlayer"
+      ],
+      "properties": {
+        "place": "place | int",
+        "eloResult": "elo | int",
+        "id": "race_player_id | str | unique",
+        "csv": "race_player.csv"
+      },
+      "style": {
+        "outside-position": "top-left"
+      }
+    },
+    {
+      "id": "n6",
+      "position": {
+        "x": 17.146654007267816,
+        "y": -522.7221144651235
+      },
+      "caption": "",
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "name | str",
+        "weight": "weight | str",
+        "id": "character_id | str | unique",
+        "csv": "character.csv"
+      },
+      "style": {}
+    },
+    {
+      "id": "n8",
+      "position": {
+        "x": -236.18566735345843,
+        "y": 269.3897931043973
+      },
+      "caption": "",
+      "labels": [
+        "User"
+      ],
+      "properties": {
+        "name": "name | str",
+        "id": "username_id | str | unique",
+        "csv": "users.csv"
+      },
+      "style": {}
+    },
+    {
+      "id": "n9",
+      "position": {
+        "x": -358.2660046557983,
+        "y": 0
+      },
+      "caption": "",
+      "labels": [
+        "GrandPrix"
+      ],
+      "properties": {
+        "title": "title | str",
+        "id": "grand_prix_id | str | unique",
+        "hardcore": "hardcore | bool",
+        "raceCount": "int | ignore",
+        "csv": "grand_prix.csv"
+      },
+      "style": {
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n10",
+      "position": {
+        "x": -716.5320093115967,
+        "y": 0
+      },
+      "caption": "",
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule": "rule |str",
+        "id": "rule_id | str | unique",
+        "csv": "grand_prix.csv"
+      },
+      "style": {}
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n1",
+      "fromId": "n0",
+      "toId": "n2",
+      "type": "HAS_COURSE",
+      "properties": {
+        "csv": "race.csv"
+      },
+      "style": {
+        "detail-orientation": "horizontal",
+        "detail-position": "inline"
+      }
+    },
+    {
+      "id": "n3",
+      "fromId": "n2",
+      "toId": "n4",
+      "type": "IN_CUP",
+      "properties": {
+        "csv": "course.csv"
+      },
+      "style": {
+        "detail-orientation": "horizontal",
+        "detail-position": "inline"
+      }
+    },
+    {
+      "id": "n4",
+      "fromId": "n1",
+      "toId": "n5",
+      "type": "PARTICIPATED",
+      "properties": {
+        "csv": "player_to_race_player.csv"
+      },
+      "style": {
+        "detail-orientation": "horizontal",
+        "detail-position": "inline"
+      }
+    },
+    {
+      "id": "n5",
+      "fromId": "n5",
+      "toId": "n0",
+      "type": "RACED_IN",
+      "properties": {
+        "csv": "race_player.csv"
+      },
+      "style": {
+        "detail-orientation": "horizontal",
+        "detail-position": "inline"
+      }
+    },
+    {
+      "id": "n6",
+      "fromId": "n5",
+      "toId": "n6",
+      "type": "PLAYED_AS",
+      "properties": {
+        "csv": "race_player.csv"
+      },
+      "style": {
+        "detail-orientation": "horizontal",
+        "detail-position": "inline"
+      }
+    },
+    {
+      "id": "n7",
+      "fromId": "n8",
+      "toId": "n0",
+      "type": "LOGGED",
+      "properties": {
+        "csv": "race.csv"
+      },
+      "style": {
+        "detail-orientation": "horizontal",
+        "detail-position": "inline"
+      }
+    },
+    {
+      "id": "n8",
+      "type": "HAS_RACE",
+      "style": {
+        "detail-orientation": "horizontal",
+        "detail-position": "inline"
+      },
+      "properties": {
+        "csv": "race.csv"
+      },
+      "fromId": "n9",
+      "toId": "n0"
+    },
+    {
+      "id": "n9",
+      "fromId": "n9",
+      "toId": "n10",
+      "type": "HAS_RULE",
+      "properties": {
+        "csv": "grand_prix.csv"
+      },
+      "style": {
+        "detail-orientation": "horizontal",
+        "detail-position": "inline"
+      }
+    }
+  ]
+}
